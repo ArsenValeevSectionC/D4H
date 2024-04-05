@@ -1,0 +1,53 @@
+:root{
+    --falured: #780214;
+    --lighterred: #EF1A28;
+    --whitesmoke: #F5F5F5;
+}
+
+*{
+    font-family: 'Loft-2', sans-serif;
+}
+
+@font-face {
+    font-family: 'Loft-2';
+    src: url('./utilities/loft-2.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Loft-5';
+    src: url('./utilities/loft-5.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+a{
+    text-decoration-color: var(--lighterred);
+    color: var(--lighterred);
+    font-weight: bold;
+}
+
+a:hover{
+    text-shadow: var(--lighterred) 1px 0 5px;
+    transition-duration: 0.7s;
+}
+
+body{
+    background-color: var(--whitesmoke);
+}
+
+.btn{
+    background-color: var(--lighterred);
+    border-color: var(--whitesmoke);
+}
+
+.btn:hover{
+    background-color: var(--lighterred);
+    border-color: var(--falured);
+}
+
+/* register area */
+.user{
+    border-right: 2px solid var(--lighterred);
+}
