@@ -5,7 +5,7 @@
 }
 
 *{
-    font-family: 'Loft-2', sans-serif;
+    font-family: 'Loft-5', sans-serif;
 }
 
 @font-face {
@@ -50,4 +50,22 @@ body{
 /* register area */
 .user{
     border-right: 2px solid var(--lighterred);
+}
+
+.bgregisterinfo{
+    background-color: var(--falured);
+    color: var(--whitesmoke);
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--lighterred); /* Change to your desired color */
+    color: var(--whitesmoke); /* Change text color to contrast with red */
+}
+
+.accordion-button:focus,
+.accordion-button.focus,
+.accordion-button:active,
+.accordion-button.active {
+    outline: none !important;
+    box-shadow: none !important;
 }
