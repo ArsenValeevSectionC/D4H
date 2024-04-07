@@ -58,14 +58,35 @@ body{
 }
 
 .accordion-button:not(.collapsed) {
-    background-color: var(--lighterred); /* Change to your desired color */
-    color: var(--whitesmoke); /* Change text color to contrast with red */
+    background-color: var(--whitesmoke); /* Change to your desired color */
+    color: var(--falured);
 }
 
 .accordion-button:focus,
 .accordion-button.focus,
 .accordion-button:active,
 .accordion-button.active {
-    outline: none !important;
-    box-shadow: none !important;
+    outline: var(--lighterred) !important;
+    box-shadow: var(--lighterred) !important;
 }
+
+.image-containerregister {
+    position: relative;
+    transform: translateY(-10%);
+    width: 400px; 
+    height: 400px; 
+}
+
+.image-containerregister img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.image2register {
+    z-index: -99; 
+    left: 50%; 
+    transform: translateX(110%) rotate(25deg) translateY(30%); 
+}
+
+/* end of register area */
