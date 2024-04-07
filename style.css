@@ -192,20 +192,16 @@
 }
 
 
-*{
-    font-family: 'Loft-2', sans-serif;
-}
-
 @font-face {
     font-family: 'Loft-2';
-    src: url('./utilities/loft-2.ttf') format('truetype');
+    src: url('./Fonts/loft-2.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Loft-5';
-    src: url('./utilities/loft-5.ttf') format('truetype');
+    src: url('./Fonts/loft-2.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
