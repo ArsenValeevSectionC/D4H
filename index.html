@@ -1,28 +1,139 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>PRJ</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
 
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-</body>
+  <body>
+    <h1 class="text-center"><b>please what what you are donating</b></h1>
+    <!-- //////// -->
+    <div class="button-container">
+      <button onclick="showContainers('clothes')">
+        Clothes<span class="material-symbols-outlined"> apparel </span>
+      </button>
+      <button onclick="showContainers('toys')">
+        Toys<span class="material-symbols-outlined"> toys_and_games </span>
+      </button>
+      <button onclick="showContainers('money')">
+        Money <span class="material-symbols-outlined"> payments </span>
+      </button>
+    </div>
+    <div class="drop-down">
+      <div id="clothes" class="container-dropDown">
+        Clothes Container <br /><button><a href="">Donate now</a></button>
+      </div>
+      <div class="drop-down">
+      <div id="toys" class="container-dropDown">
+        Clothes Container <br /><button><a href="">Donate now</a></button>
+      </div>
+      <!-- Other container divs here -->
+    </div>
+    <!-- /////////// -->
 
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    <h1 class="text-center"><b>Top Organisations</b></h1>
+    <div class="container">
+      <div class="card">
+        <div class="image-container">
+          <img
+            src="./donation-page-images/istockphoto-1399267460-170667a.webp"
+            alt="Image"
+            class="org-image"
+          />
+        </div>
+        <div class="content">
+          <div class="heading">Save the children</div>
+          <div class="subheading">
+            Today, over 100 years later, we work in the United States and around
+            the world to give children a healthy start in life, the opportunity
+            to learn and protection from harm. When crisis strikes and children
+            are most vulnerable, we are always among the first to respond and
+            the last to leave
+          </div>
+          <a href="#" class="button">Donate now</a>
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    <div class="container">
+      <div class="card">
+        <div class="image-container">
+          <img
+            src="./donation-page-images/lodwar-429-1-scaled.jpg-4.webp"
+            alt="Image"
+            class="org-image"
+          />
+        </div>
+        <div class="content">
+          <div class="heading">Convey of Hope</div>
+          <div class="subheading">
+            Convoy of Hope is a faith-based organization with a driving passion
+            to feed the world through children’s feeding initiatives, community
+            outreach. In partnership with local churches, civic organizations,
+            and government agencies, Convoy strategically offers help and hope
+            to communities around the world.
+          </div>
+          <a href="#" class="button">Donate now</a>
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    <div class="container">
+      <div class="card">
+        <div class="image-container">
+          <img
+            src="./donation-page-images/2023-Intranet-assets-GTA-Food-Security_1920x1080.jpg"
+            alt="Image"
+            class="org-image"
+          />
+        </div>
+        <div class="content">
+          <div class="heading">United Way Canada</div>
+          <div class="subheading">
+            works to improve lives and build communities by tackling social
+            issues such as poverty, homelessness, and mental health. We support
+            a wide range of programs and initiatives across Canada
+          </div>
+          <a href="#" class="button">Donate now</a>
+        </div>
+      </div>
+      <!--  -->
+    </div>
+  </body>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
     integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"
+  ></script>
 
-<script src="script.js"></script>
-
+  <script src="script.js"></script>
 </html>
