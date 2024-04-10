@@ -2,14 +2,8 @@ console.log("Hello")
 //navbar for mobile version change comment later !!!!!!!!!
 function toggleNav() {
     var navMenu = document.getElementById("navMenu");
-    navMenu.classList.toggle("fadeIn"); 
+    navMenu.classList.toggle("active"); 
 }
-
-// document.getElementById("use-login").addEventListener("click", function(event){
-//     event.preventDefault();
-//     document.getElementById("registerlogin").textContent = "LOGIN"
-//     document.getElementById("switchinformation").textContent = "Need to register?"
-// })
 
 document.getElementById("use-login").addEventListener("click", function(event){
     event.preventDefault();
