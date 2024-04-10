@@ -3,6 +3,8 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f2f2f2;
+  background-image: url(donation-page-images/trianglify-image.png);
+
 }
 
 main {
@@ -263,6 +265,7 @@ footer a {
   font-family: "Acme", sans-serif;
   font-weight: 400;
   font-style: normal;
+  color: white
 }
 
 .btn {
@@ -291,10 +294,12 @@ footer a {
   padding: 20px;
   background-color: var(--whitesmoke);
   border-radius: 10px;
+  border: #f2f2f2;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transform: translate(-50%, -50%);
   background-color: var(--falured);
   color: white;
+ 
 }
 
 .container-dropDown button {
@@ -350,7 +355,7 @@ footer a {
   text-align: center;
   padding: 15px 15px;
 
-  color: rgb(0, 0, 0);
+  color: rgb(243, 243, 243);
 }
 
 .container {
@@ -425,8 +430,3 @@ footer a {
   border-radius: 10px;
 }
 
-.org-details{
-background-image: url(donation-page-images/trianglify-image.png);
-  background-size: cover; /* Ensure the background image covers the entire element */
-  background-position: center; /* Center the background image */
-}
