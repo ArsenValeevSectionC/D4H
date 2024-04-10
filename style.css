@@ -4,11 +4,377 @@ body {
   padding: 0;
   background-color: #f2f2f2;
 }
+
+main {
+  padding-top: 100px;
+}
+
+/* VARIABLES */
+:root {
+  --falured: #780214;
+  --lighterred: #ef1a28;
+  --whitesmoke: #f5f5f5;
+  --color-for-nav-bg: rgb(200, 78, 63);
+}
+
+/* NAVBAR */
+@media screen and (min-width: 1000px) {
+  .icon-mob {
+    display: none;
+  }
+
+  .logo {
+    width: 300px;
+    padding-left: 150px;
+  }
+
+  .container-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+  }
+
+  .navigation {
+    font-family: "Loft-2", sans-serif;
+    font-size: 22px;
+    width: 1100px;
+    height: 80px;
+    background-color: var(--color-for-nav-bg);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navigation ul {
+    display: flex;
+    width: 1050px;
+  }
+
+  .navigation ul li {
+    position: relative;
+    list-style: none;
+    width: 1500px;
+    height: 110px;
+    z-index: 10;
+  }
+
+  .navigation ul li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navigation ul li a .icon {
+    position: relative;
+    display: block;
+    line-height: 105px;
+    font-size: 2.3em;
+    text-align: center;
+    transition: 0.55s;
+    color: white;
+  }
+
+  .navigation ul li:hover a .icon {
+    transform: translateY(30px);
+  }
+
+  .navigation ul li.active a .icon {
+    transform: translateY(30px);
+  }
+
+  .navigation ul li a .text-page {
+    position: absolute;
+    color: white;
+    font-weight: 400;
+    font-size: 0.75em;
+    letter-spacing: 0.05em;
+    transition: 0.55s;
+    opacity: 0;
+  }
+
+  .navigation ul li:hover a .text-page {
+    transform: translateY(-20px);
+    opacity: 1;
+  }
+
+  .navigation ul li.active a .text-page {
+    transform: translateY(-20px);
+    opacity: 1;
+  }
+
+  .toggle-btn {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .toggle-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 50px;
+    background-color: var(--color-for-nav-bg);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 22px;
+    color: white;
+  }
+
+  header {
+    background-color: var(--color-for-nav-bg);
+  }
+
+  .toggle-btn ion-icon {
+    font-size: 1.5em;
+    margin-right: 5px;
+  }
+
+  .toggle-text {
+    text-align: center;
+    font-size: 22px;
+    color: white;
+    margin-top: 10px;
+  }
+
+  .container-nav {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .navigation {
+    width: 80%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 5px;
+    padding: 20px;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    display: none;
+    z-index: 1000;
+    display: none;
+    opacity: 0;
+    transition: opacity 10s ease;
+  }
+
+  .fadeIn {
+    display: block;
+    opacity: 1;
+  }
+
+  .navigation.active {
+    display: block;
+  }
+
+  .navigation ul {
+    padding: 0;
+  }
+
+  .navigation ul li {
+    list-style: none;
+    margin-bottom: 10px;
+  }
+
+  .navigation ul li a {
+    text-decoration: none;
+    font-family: "Loft-2", sans-serif;
+    color: white;
+    transition: color 0.3s ease;
+  }
+
+  .navigation ul li a:hover {
+    color: lightgray;
+  }
+
+  .icon {
+    display: none;
+  }
+}
+
+@font-face {
+  font-family: "Loft-2";
+  src: url("./Fonts/loft-2.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Loft-5";
+  src: url("./Fonts/loft-2.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+a {
+  text-decoration-color: var(--lighterred);
+  color: var(--lighterred);
+  font-weight: bold;
+}
+
+a:hover {
+  text-shadow: var(--lighterred) 1px 0 5px;
+  transition-duration: 0.7s;
+}
+
+body {
+  background-color: var(--whitesmoke);
+}
+
+footer {
+  background-color: rgb(200, 78, 63);
+  color: white;
+}
+
+footer .col-md-6 {
+  margin-top: 15px;
+}
+
+footer .list-inline {
+  font-size: 2.3em;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+.donatio-TopC {
+  padding-bottom: 30px;
+}
+
+.donation-quote {
+  font-family: "Indie Flower", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.text-center {
+  font-family: "Acme", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.btn {
+  background-color: var(--lighterred);
+  border-color: var(--whitesmoke);
+}
+
+.btn:hover {
+  background-color: var(--lighterred);
+  border-color: var(--falured);
+}
+
+/* register area */
+.user {
+  border-right: 2px solid var(--lighterred);
+}
+
+.container-dropDown {
+  display: none;
+  width: 80%;
+  margin: 30px;
+  margin-top: 70px;
+  margin-left: 700px;
+  /* padding-bottom: 10px; */
+  text-align: center;
+  padding: 20px;
+  background-color: var(--whitesmoke);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transform: translate(-50%, -50%);
+  background-color: var(--falured);
+  color: white;
+}
+
+.container-dropDown button {
+  background-color: #e1dcdc;
+  color: rgb(0, 0, 0);
+}
+
+.button-container {
+  text-align: center;
+  padding-bottom: 5px;
+  padding-top: 20px;
+  border: #000000;
+  border: #000000;
+}
+
+.button-container button {
+  position: relative;
+  padding: 10px 20px;
+  padding-bottom: 20px;
+  margin: 5px;
+  background-color: rgb(236, 234, 234);
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button-container button .material-symbols-outlined {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  transform: translateY();
+  font-size: 20px;
+}
+
+.button-container button:hover {
+  /* Pull the button upwards when hovered */
+  transform: translateY(-0.33em);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  transition
+}
+
+.button-container button:active{
+  /* Push the button downwards when pressed */
+  transform: translateY(0);
+}
+
+.donation-quote {
+  display: flex;
+  text-align: center;
+  padding: 15px 15px;
+
+  color: rgb(0, 0, 0);
+}
+
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
   padding-top: 25px;
+  float: left;
+}
+.container-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 25px;
+  padding-left: 20px;
+  float: left;
+}
+.container-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 25px;
+  padding-right: 20px;
+  float: right;
 }
 .card {
   background-color: #ffffff;
@@ -59,50 +425,8 @@ body {
   border-radius: 10px;
 }
 
-/* ///// */
-
-.container-dropDown {
-  display: none;
-  width: 80%;
-  margin: 70px auto;
-  margin-left: 700px;
-
-  text-align: center;
-  padding: 20px;
-  background-color: lightblue;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
-  transform: translate(-50%, -50%);
-}
-
-.button-container {
-  text-align: center;
-  padding-bottom: 5px;
-}
-
-.button-container button {
-  position: relative;
-  padding: 10px 20px;
-  padding-bottom: 20px;
-  margin: 5px;
-  background-color: #d73535;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.button-container button .material-symbols-outlined {
-  position: absolute;
-  top: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  transform: translateY();
-  font-size: 20px;
-}
-
-.button-container button:hover {
-  background-color: #0056b3;
+.org-details{
+background-image: url(donation-page-images/trianglify-image.png);
+  background-size: cover; /* Ensure the background image covers the entire element */
+  background-position: center; /* Center the background image */
 }
