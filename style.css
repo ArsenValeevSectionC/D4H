@@ -63,7 +63,6 @@ body{
     .navbar-logo {
         margin-right: 10px; /* Optional margin for spacing */
     }
-    
 
     .logo {
         width: 300px;
@@ -222,8 +221,9 @@ body{
         color: var(--whitesmoke);
         margin-top: 10px;
     }
-
+    
     .container-nav {
+        background-color: var(--falured);
         justify-content: center;
         text-align: center;
     }
@@ -271,6 +271,7 @@ body{
 
     .accordion-container {
         margin-top: 20px; 
+        width: 100%;
     }
 
     .user{
@@ -304,6 +305,11 @@ body{
   border-color: var(--lighterred) !important;
 }
 
+.form-control:focus {
+    border-color: var(--falured); /* Change the border color to red when focused */
+    box-shadow: 0 0 0 0.25rem var(--lighterred); /* Optional: Add a red shadow when focused */
+}
+
 .accordion-button{
     font-weight: bolder;
 }
@@ -311,6 +317,68 @@ body{
 .accordion-button:not(.collapsed) {
     background-color: var(--whitesmoke); 
     color: var(--falured);
+}
+
+@-webkit-keyframes shake-horizontal {
+    0%,
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70% {
+      -webkit-transform: translateX(-10px);
+              transform: translateX(-10px);
+    }
+    20%,
+    40%,
+    60% {
+      -webkit-transform: translateX(10px);
+              transform: translateX(10px);
+    }
+    80% {
+      -webkit-transform: translateX(8px);
+              transform: translateX(8px);
+    }
+    90% {
+      -webkit-transform: translateX(-8px);
+              transform: translateX(-8px);
+    }
+  }
+  @keyframes shake-horizontal {
+    0%,
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70% {
+      -webkit-transform: translateX(-10px);
+              transform: translateX(-10px);
+    }
+    20%,
+    40%,
+    60% {
+      -webkit-transform: translateX(10px);
+              transform: translateX(10px);
+    }
+    80% {
+      -webkit-transform: translateX(8px);
+              transform: translateX(8px);
+    }
+    90% {
+      -webkit-transform: translateX(-8px);
+              transform: translateX(-8px);
+    }
+}
+
+.shake-horizontal {
+    -webkit-animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+            animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
 }
 
 .accordion-button:focus,
@@ -342,6 +410,11 @@ body{
 
 .image3register{
     transform: translateX(50%) rotate(60deg) translateY(25%);
+}
+
+.toast{
+    background-color: var(--falured);
+    color: var(--whitesmoke);
 }
 /* end of register area */
 
