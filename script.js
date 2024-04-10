@@ -29,3 +29,10 @@ var multipleCardCarousel = document.querySelector(
   } else {
     $(multipleCardCarousel).addClass("slide");
   }
+  console.log("Hello")
+//navbar for mobile version change comment later !!!!!!!!!
+function toggleNav() {
+    var navMenu = document.getElementById("navMenu");
+    navMenu.classList.toggle("fadeIn"); 
+}
+
