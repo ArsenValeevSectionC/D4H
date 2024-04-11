@@ -2,9 +2,9 @@
 function toggleNav() {
     var navMenu = document.getElementById("navMenu");
     navMenu.classList.toggle("fadeIn"); 
-  }
+}
   
-  const toastTrigger = document.getElementById('liveToastBtn')
+const toastTrigger = document.getElementById('liveToastBtn')
 const toastLiveExample = document.getElementById('liveToast')
 
 if (toastTrigger) {

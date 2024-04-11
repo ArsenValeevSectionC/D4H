@@ -1,22 +1,56 @@
 /* VARIABLES */
+/* Basic css for all pages */
 :root{
     --falured: #780214;
     --lighterred: #EF1A28;
     --whitesmoke: #F5F5F5;
-    --color-for-nav-bg: rgb(200, 78, 63);
-    
+}
+
+*{
+    font-family: "Loft-5", sans-serif;
+}
+
+@font-face {
+    font-family: 'Loft-2';
+    src: url('./utilities/loft-2.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Loft-5';
+    src: url('./utilities/loft-5.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+a{
+    text-decoration-color: var(--lighterred);
+    color: var(--lighterred);
+    font-weight: bold;
+}
+
+a:hover{
+    text-shadow: var(--lighterred) 1px 0 5px;
+    transition-duration: 0.7s;
 }
 
 body{
-
-margin: 0;
-
+    margin: 0;
+    /*background-color: var(--whitesmoke);*/
+    background-image: url("trianglify-image.png");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-header{
-    
-    background-color: var(--color-for-nav-bg)
+.btn{
+    background-color: var(--lighterred);
+    border-color: var(--whitesmoke);
+}
 
+.btn:hover{
+    background-color: var(--lighterred);
+    border-color: var(--falured);
 }
 
 /*.logo{
@@ -24,33 +58,42 @@ header{
     align-self: center;
 }*/
 
-/* NAVBAR */
-@media screen and (min-width: 1001px) {
+/* media query for navbar */
+@media screen and (min-width: 1000px) {
     .icon-mob {
         display: none;
     }
 
+    .navbar-logo-wrapper {
+        display: flex;
+        align-items: center; /* Center vertically */
+    }
+    
+    .navbar-logo {
+        margin-right: 10px; /* Optional margin for spacing */
+    }
 
     .logo {
-        width: max-content;
-        margin-left: 3em;
+        width: 300px;
+        padding-left: 150px;
     }
 
     .container-nav {
         display: flex;
-        justify-content: center;
+        justify-content: flex-end; /* Align items to the right side */
         align-items: center;
-        position: sticky;
-        top: 0;
-        right: 0;
+        width: auto; /* Adjust width as needed */
+        z-index: 1000;
     }
-
+    
     .navigation {
-        font-family: 'Loft-2', sans-serif;
+        font-family: 'Loft-5', sans-serif;
+        font-weight: bold;
         font-size: 22px;
-        width: 1100px;
+        width: 100%; /* Adjust the width as needed */
         height: 120px;
-        position: absolute;
+        background-color: var(--falured);
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -97,7 +140,6 @@ header{
         transform: translateY(30px);
     }
 
-
     .navigation ul li a .text-page {
         position: absolute;
         color: white;
@@ -121,68 +163,78 @@ header{
     .toggle-btn{
         display: none;
     }
+
+    /* media query for register page after 1000px */
+    .user{
+        border-right: 3px solid var(--lighterred);
+    }
 }
 
 @media screen and (max-width: 1000px) {
+    /* media query for navbar */
     .toggle-btn {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100px;
         height: 50px;
-        background-color: var(--color-for-nav-bg);
+        background-color: var(--falured);
         border: none;
         border-radius: 5px;
         cursor: pointer;
         font-size: 22px;
-        color: white; 
+        color: var(--whitesmoke);
+        position: relative;
+        z-index: 1001;
+    }
+    
+    .navigation {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+        padding: 20px;
+        position: fixed;
+        top: 3%;
+        right: 10px;
+        overflow: hidden;
+        z-index: 1000;
+        opacity: 0;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        transform: translateY(-100%);
+        background-color: var(--falured);
+    }
+    
+    .navigation.active {
+        opacity: 1;
+        transform: translateY(0);
+        display: block;
+        background-color: var(--falured);
+        padding-top: 5%;
+        z-index: 999;
     }
     
     header {
-        background-color: var(--color-for-nav-bg);
-
+        background-color: var(--falured);
     }
-
+    
     .toggle-btn ion-icon {
         font-size: 1.5em;
         margin-right: 5px;
+        z-index: 100;
     }
 
     .toggle-text {
         text-align: center;
         font-size: 22px;
-        color: white;
+        color: var(--whitesmoke);
         margin-top: 10px;
     }
-
+    
     .container-nav {
+        background-color: var(--falured);
         justify-content: center;
         text-align: center;
-    }
-
-    .navigation {
-        width: 80%;
-        max-width: 400px; 
-        height: auto;
-        border-radius: 5px;
-        padding: 20px;
-        position: absolute;
-        top: 60px;
-        right: 10px; 
-        display: none; 
-        z-index: 1000;
-        display: none;
-        opacity: 0;
-        transition: opacity 10s ease;
-    }
-
-    .fadeIn {
-        display: block; 
-        opacity: 1; 
-    }
-
-    .navigation.active {
-        display: block; 
     }
 
     .navigation ul {
@@ -197,15 +249,50 @@ header{
     .navigation ul li a {
         text-decoration: none;
         font-family: 'Loft-2', sans-serif;
-        color: white;
+        color: var(--whitesmoke);
         transition: color 0.3s ease;
     }
 
     .navigation ul li a:hover {
-        color: lightgray;
+        color: var(--whitesmoke);
     }
 
     .icon {
+        display: none;
+    }
+    /* end of navbar media query */
+
+    /* media query for register page before 1000px */
+    .container.p-5.text-center.register {
+        padding: 0;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col-8, .col-4 {
+        width: 100%; 
+        max-width: none; 
+        padding: 0;
+    }
+
+    .accordion-container {
+        margin-top: 20px; 
+        width: 100%;
+    }
+
+    .user{
+        border-bottom: 3px solid var(--lighterred);
+        padding-bottom: 2%;
+    }
+
+    .charity{
+        padding-top: 2%;
+    }
+
+    .col-4 {
         display: none;
     }
 }
@@ -240,9 +327,10 @@ body{
     background-color: var(--whitesmoke);
 }
 
+/* footer area */
 footer {
-    background-color: rgb(200, 78, 63); 
-    color: white;
+    background-color: var(--falured); 
+    color: var(--whitesmoke);
 }
 
 footer .col-md-6{
@@ -255,43 +343,35 @@ footer .list-inline{
 
 footer a{
     text-decoration: none; 
-    color: white;
+    color: var(--whitesmoke);
 }
+/* end of footer area */
 
-.btn{
-    background-color: var(--lighterred);
-    border-color: var(--whitesmoke);
-}
-
-.btn:hover{
-    background-color: var(--lighterred);
-    border-color: var(--falured);
-}
-
-/* register area */
-.user{
-    border-right: 2px solid var(--lighterred);
-}
 
 body {
     font-family: Arial, sans-serif;
     background-color: #f2f2f2;
-  }
+}
   
-  h1 {
+h1, h2 {
     text-align: center;
-  }
+}
   
-  .contact-form {
+.contact-form {
     width: 100%;
     max-width: 1000px;
     background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
+    border: 5px solid var(--falured);
+}
 
-  .mapouter {
+/*.maparea{
+    background-image: url("trianglify-image.png");
+}*/
+
+.mapouter {
     position: relative;
     text-align: right;
     width: 100%;
@@ -307,23 +387,24 @@ body {
 
 .gmap_iframe {
     height: 551px !important;
+    border-radius: 15px;
 }
   
-  .form-input,
-  .form-textarea {
+.form-input,
+.form-textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
-  }
+}
   
-  .form-textarea {
+.form-textarea {
     resize: vertical;
-  }
+}
   
-  .submit-btn {
+.submit-btn {
     width: 100%;
     background-color: var(--lighterred);
     color: #ffffff;
@@ -332,19 +413,19 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-  }
+}
   
-  .submit-btn:hover {
+.submit-btn:hover {
     background-color: var(--falured);
-  }
+}
   
-  .privacy-text {
+.privacy-text {
     text-align: center;
     margin-top: 20px;
     color: #777;
-  }
+}
   
-  .contact-main{
+.contact-main{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -352,4 +433,4 @@ body {
     gap: 2em;
     margin-top: 1em;
     margin-bottom: 1em;
-  }
+}
