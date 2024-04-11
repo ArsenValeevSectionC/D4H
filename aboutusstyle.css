@@ -107,10 +107,6 @@
     }
 }
 
-img {
-    border-radius: 50%;
-}
-
 /* Basic css for all pages */
 :root{
     --falured: #780214;
