@@ -78,61 +78,36 @@
 
     <main>
         <div class="contact-main">
-            <section class="contact-message">
+            <section class="contact-form">
                 <h2>We Are Here To Help!</h2>
-                <p>Let us know how we can best serve you. Use the contact form to email us!</p>
+                <p class="text-justify">Your support means the world to us! Whether you have questions, feedback, or
+                    want to get involved,
+                    please use the contact form below to reach out. Every inquiry helps us make a difference in our
+                    community.<br> Thank you for your kindness and generosity.
+                </p>
             </section>
-        <form class="contact-form my-5" action="/submit_form" method="post">
-            <h1>Contact Us</h1>
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" class="form-input"><br>
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" class="form-input"><br>
-            <label for="phone">Phone Number:</label><br>
-            <input type="tel" id="phone" name="phone" class="form-input"><br>
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" rows="4" cols="50" class="form-textarea"></textarea><br><br>
-            <input type="submit" value="Submit" class="submit-btn">
-        </form>
-    
-    </div>
-        <div class="toast align-items-center text-bg-primary border-0" role="alert" aria-live="assertive"
-            aria-atomic="true">
-            <div class="d-flex">
-                <div class="toast-body">
-                    Hello, world! This is a toast message.
-                </div>
-                <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
-
-                <!-- Toast -->
-                <div class="toast align-items-center text-white bg-primary border-0" role="alert" aria-live="assertive"
-                    aria-atomic="true" id="liveToast">
-                    <div class="d-flex">
-                        <div class="toast-body">
-                            Hello, world! This is a toast message.
-                        </div>
-                        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
-                            aria-label="Close"></button>
-                    </div>
-                </div>
-
-
-
-                <div class="toast-container position-fixed bottom-0 end-0 p-3">
-                    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                        <div class="toast-header">
-                            <img src="..." class="rounded me-2" alt="...">
-                            <strong class="me-auto">Bootstrap</strong>
-                            <small>11 mins ago</small>
-                            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-                        </div>
-                        <div class="toast-body">
-                            Hello, world! This is a toast message.
-                        </div>
-                    </div>
-                </div>
+            <form class="contact-form" action="/submit_form" method="post">
+                <h1>Contact Us</h1>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" class="form-input"><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" class="form-input"><br>
+                <label for="phone">Phone Number:</label><br>
+                <input type="tel" id="phone" name="phone" class="form-input"><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" cols="50" class="form-textarea"></textarea><br><br>
+                <input type="submit" value="Submit" class="submit-btn">
+            </form>
+            <section class="contact-form">
+            <div class="mapouter">
+                <div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no"
+                        marginheight="0" marginwidth="0"
+                        src="https://maps.google.com/maps?width=1159&amp;height=551&amp;hl=en&amp;q=toronto,On&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a
+                        href="https://embed-googlemap.com">embed google maps in website</a></div>
             </div>
+            </section>
         </div>
+
     </main>
 
     <footer class="footer">
