@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f2f2f2;
-  background-image: url(donation-page-images/trianglify-image.png);
+  background-image: url(../images/trianglify-image.png);
   background-size: cover;
   background-position: center;
 
@@ -291,14 +291,14 @@ main {
 
 @font-face {
   font-family: "Loft-2";
-  src: url("./Fonts/loft-2.ttf") format("truetype");
+  src: url("../Fonts/loft-2.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Loft-5";
-  src: url("./Fonts/loft-2.ttf") format("truetype");
+  src: url("../Fonts/loft-2.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }

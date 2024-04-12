@@ -1,4 +1,3 @@
-
 let likeBtn1 = document.querySelector('.fa-heart1');
 likeBtn1.addEventListener('click', changeLike1);
 function changeLike1() {

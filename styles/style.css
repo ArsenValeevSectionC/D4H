@@ -8,14 +8,14 @@
 /* FONTS */
 @font-face {
     font-family: 'Loft-2';
-    src: url('./Fonts/loft-2.ttf') format('truetype');
+    src: url('../Fonts/loft-2.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Loft-5';
-    src: url('./Fonts/loft-5.ttf') format('truetype');
+    src: url('../Fonts/loft-5.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -38,7 +38,7 @@ footer {
 }
 
 body {
-    background-image: url(./images/trianglify-image-2.png);
+    background-image: url(../images/trianglify-image.png);
 }
 
 /* NAVBAR */
@@ -280,19 +280,11 @@ body {
 @media screen and (min-width: 1100px) {
     .news {
         right: 0;
-        /* Зафиксируйте блок справа */
         width: 25%;
         height: 100vh;
-        /* Сделайте блок на всю высоту страницы */
         background-color: #e1e1e1;
-        /* Задайте желаемый цвет фона */
         overflow-y: auto;
-        /* Добавьте прокрутку, если контент выходит за пределы блока */
-        /* padding: 20px; */
-        /* Добавьте отступы по вашему усмотрению */
         box-sizing: border-box;
-        /* Учитывайте отступы и границы в общую ширину и высоту */
-        /* background-image: url(./awdas.png); */
     }
 
     .bg-red {
@@ -326,7 +318,6 @@ a {
 
 .instagram-card {
     background: #ffffff;
-    /* border: 1px solid #f2f2f2; */
     border-left: 5px solid var(--falured);
     border-right: 5px solid var(--falured);
     border-radius: 3px;

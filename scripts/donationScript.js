@@ -1,4 +1,7 @@
-
+function toggleNav() {
+  let navMenu = document.getElementById("navMenu");
+  navMenu.classList.toggle("active"); 
+}
 function showContainers(type) {
       var containers = document.querySelectorAll(".container-dropDown");
       for (var i = 0; i < containers.length; i++) {
