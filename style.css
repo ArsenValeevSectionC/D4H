@@ -8,6 +8,27 @@ body {
   background-position: center;
 
 }
+
+footer .container{
+  background-color: var(--falured); 
+  color: var(--whitesmoke);
+  font-family: 'Loft-5', sans-serif;
+  width: 100%;
+}
+
+footer .col-md-6{
+  margin-top: 15px;
+}
+
+footer .list-inline{
+  font-size: 2.3em;
+}
+
+footer a{
+  text-decoration: none; 
+  color: var(--whitesmoke);
+}
+
 @media only screen and (min-width: 768px) {
   body {
     background-attachment: fixed;
@@ -36,185 +57,235 @@ main {
 /* NAVBAR */
 @media screen and (min-width: 1000px) {
   .icon-mob {
-    display: none;
+      display: none;
+  }
+
+  .navbar-logo-wrapper {
+      display: flex;
+      align-items: center;
+  }
+  
+  .navbar-logo {
+      margin-right: 10px;
   }
 
   .logo {
-    width: 300px;
-    padding-left: 150px;
+      width: 300px;
+      padding-left: 150px;
   }
 
   .container-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 100;
+      display: flex;
+      justify-content: flex-end; 
+      align-items: center;
+      width: auto;
+      z-index: 1000;
   }
-
+  
   .navigation {
-    font-family: "Loft-2", sans-serif;
-    font-size: 22px;
-    width: 1100px;
-    height: 80px;
-    background-color: var(--color-for-nav-bg);
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+      font-family: 'Loft-5', sans-serif;
+      font-weight: bold;
+      font-size: 22px;
+      width: 100%;
+      height: 120px;
+      background-color: var(--falured);
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
   }
 
   .navigation ul {
-    display: flex;
-    width: 1050px;
+      display: flex;
+      width: 1050px;
   }
 
   .navigation ul li {
-    position: relative;
-    list-style: none;
-    width: 1500px;
-    height: 110px;
-    z-index: 10;
+      position: relative;
+      list-style: none;
+      width: 1500px;
+      height: 110px;
+      z-index: 1;
   }
 
   .navigation ul li a {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
   }
 
   .navigation ul li a .icon {
-    position: relative;
-    display: block;
-    line-height: 105px;
-    font-size: 2.3em;
-    text-align: center;
-    transition: 0.55s;
-    color: white;
+      position: relative;
+      display: block;
+      line-height: 105px;
+      font-size: 2.3em;
+      text-align: center;
+      transition: 0.55s;
+      color: white;
   }
 
   .navigation ul li:hover a .icon {
-    transform: translateY(30px);
+      transform: translateY(30px);
   }
 
   .navigation ul li.active a .icon {
-    transform: translateY(30px);
+      transform: translateY(30px);
   }
 
   .navigation ul li a .text-page {
-    position: absolute;
-    color: white;
-    font-weight: 400;
-    font-size: 0.75em;
-    letter-spacing: 0.05em;
-    transition: 0.55s;
-    opacity: 0;
+      position: absolute;
+      color: white;
+      font-weight: 400;
+      font-size: 0.75em;
+      letter-spacing: 0.05em;
+      transition: 0.55s;
+      opacity: 0;
   }
 
   .navigation ul li:hover a .text-page {
-    transform: translateY(-20px);
-    opacity: 1;
+      transform: translateY(-20px);
+      opacity: 1;
   }
 
   .navigation ul li.active a .text-page {
-    transform: translateY(-20px);
-    opacity: 1;
+      transform: translateY(-20px);
+      opacity: 1;
   }
 
-  .toggle-btn {
-    display: none;
+  .toggle-btn{
+      display: none;
+  }
+
+  .user{
+      border-right: 3px solid var(--lighterred);
   }
 }
 
 @media screen and (max-width: 1000px) {
   .toggle-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100px;
-    height: 50px;
-    background-color: var(--color-for-nav-bg);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 22px;
-    color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100px;
+      height: 50px;
+      background-color: var(--falured);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 22px;
+      color: var(--whitesmoke);
+      position: relative;
+      z-index: 1001;
   }
-
+  
+  .navigation {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+      padding: 20px;
+      position: fixed;
+      top: 3%;
+      right: 10px;
+      overflow: hidden;
+      z-index: 1000;
+      opacity: 0;
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      transform: translateY(-100%);
+      background-color: var(--falured);
+  }
+  
+  .navigation.active {
+      opacity: 1;
+      transform: translateY(0);
+      display: block;
+      background-color: var(--falured);
+      padding-top: 5%;
+      z-index: 999;
+  }
+  
   header {
-    background-color: var(--color-for-nav-bg);
+      background-color: var(--falured);
   }
-
+  
   .toggle-btn ion-icon {
-    font-size: 1.5em;
-    margin-right: 5px;
+      font-size: 1.5em;
+      margin-right: 5px;
+      z-index: 100;
   }
 
   .toggle-text {
-    text-align: center;
-    font-size: 22px;
-    color: white;
-    margin-top: 10px;
+      text-align: center;
+      font-size: 22px;
+      color: var(--whitesmoke);
+      margin-top: 10px;
   }
-
+  
   .container-nav {
-    justify-content: center;
-    text-align: center;
-  }
-
-  .navigation {
-    width: 80%;
-    max-width: 400px;
-    height: auto;
-    border-radius: 5px;
-    padding: 20px;
-    position: absolute;
-    top: 60px;
-    right: 10px;
-    display: none;
-    z-index: 1000;
-    display: none;
-    opacity: 0;
-    transition: opacity 10s ease;
-  }
-
-  .fadeIn {
-    display: block;
-    opacity: 1;
-  }
-
-  .navigation.active {
-    display: block;
+      background-color: var(--falured);
+      justify-content: center;
+      text-align: center;
   }
 
   .navigation ul {
-    padding: 0;
+      padding: 0;
   }
 
   .navigation ul li {
-    list-style: none;
-    margin-bottom: 10px;
+      list-style: none;
+      margin-bottom: 10px;
   }
 
   .navigation ul li a {
-    text-decoration: none;
-    font-family: "Loft-2", sans-serif;
-    color: white;
-    transition: color 0.3s ease;
+      text-decoration: none;
+      font-family: 'Loft-2', sans-serif;
+      color: var(--whitesmoke);
+      transition: color 0.3s ease;
   }
 
   .navigation ul li a:hover {
-    color: lightgray;
+      color: var(--whitesmoke);
   }
 
   .icon {
-    display: none;
+      display: none;
+  }
+
+  .container.p-5.text-center.register {
+      padding: 0;
+  }
+
+  .row {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .col-8, .col-4 {
+      width: 100%; 
+      max-width: none; 
+      padding: 0;
+  }
+
+  .accordion-container {
+      margin-top: 20px; 
+      width: 100%;
+  }
+
+  .user{
+      border-bottom: 3px solid var(--lighterred);
+      padding-bottom: 2%;
+  }
+
+  .charity{
+      padding-top: 2%;
+  }
+
+  .col-4 {
+      display: none;
   }
 }
 
@@ -245,24 +316,6 @@ a:hover {
 
 body {
   background-color: var(--whitesmoke);
-}
-
-footer {
-  background-color: rgb(200, 78, 63);
-  color: white;
-}
-
-footer .col-md-6 {
-  margin-top: 15px;
-}
-
-footer .list-inline {
-  font-size: 2.3em;
-}
-
-footer a {
-  text-decoration: none;
-  color: white;
 }
 
 
@@ -322,10 +375,10 @@ background-color: #e1dcdc;
   .container-dropDown button {
     background-color: #e1dcdc;
   color: rgb(0, 0, 0);
-  position: absolute; /* Added */
-  left: 50%; /* Added */
-  transform: translateX(-50%); /* Added */
-  bottom: -30px; /* Adjust as needed */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); 
+  bottom: -30px;
   }
 }
 
@@ -341,7 +394,7 @@ background-color: #e1dcdc;
   
   .container-dropDown button {
     font-size: 15px;
-     bottom: -20px; /* Adjust as needed */
+     bottom: -20px; 
   }
 }
 
