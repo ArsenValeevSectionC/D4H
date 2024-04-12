@@ -37,7 +37,10 @@ a:hover{
 
 body{
     margin: 0;
-    background-color: var(--whitesmoke);
+    /*background-color: var(--whitesmoke);*/
+    background-image: url("./utilities/pictures/trianglify-image.png");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .btn{
@@ -56,7 +59,7 @@ body{
 }*/
 
 /* media query for navbar */
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1001px) {
     .icon-mob {
         display: none;
     }
@@ -187,12 +190,11 @@ body{
     
     .navigation {
         width: 100%;
-        max-width: 100%;
         height: auto;
         border-radius: 5px;
         padding: 20px;
-        position: fixed;
-        top: 3%;
+        position: relative;
+        top: 5%;
         right: 10px;
         overflow: hidden;
         z-index: 1000;
@@ -240,7 +242,6 @@ body{
 
     .navigation ul li {
         list-style: none;
-        margin-bottom: 10px;
     }
 
     .navigation ul li a {
@@ -258,11 +259,6 @@ body{
         display: none;
     }
     /* end of navbar media query */
-
-    /* media query for register page before 1000px */
-    .container.p-5.text-center.register {
-        padding: 0;
-    }
 
     .row {
         flex-direction: column;
@@ -364,26 +360,26 @@ h1, h2 {
     border: 5px solid var(--falured);
 }
 
-.maparea{
-    background-image: url(./utilities/pictures/trianglify-image.png);
-}
+/*.maparea{
+    background-image: url("trianglify-image.png");
+}*/
 
 .mapouter {
     position: relative;
     text-align: right;
     width: 100%;
-    height: 551px;
+    height: 451px;
 }
 
 .gmap_canvas {
     overflow: hidden;
     background: none !important;
     width: 100%;
-    height: 551px;
+    height: 451px;
 }
 
 .gmap_iframe {
-    height: 551px !important;
+    height: 451px !important;
 }
   
 .form-input,
@@ -402,13 +398,14 @@ h1, h2 {
   
 .submit-btn {
     width: 100%;
-    background-color: var(--lighterred);
+    background-color: #BE0F1F;
     color: #ffffff;
     padding: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-weight: bolder;
 }
   
 .submit-btn:hover {
@@ -429,4 +426,26 @@ h1, h2 {
     gap: 2em;
     margin-top: 1em;
     margin-bottom: 1em;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24;
+  color: var(--whitesmoke);
+  border-radius: 50px;
+  border: solid 2px var(--falured);
+  padding: 10px;
+  background-color: #BE0F1F;
+}
+
+.material-symbols-outlined:hover{
+    background-color: var(--falured);
+    border:solid 2px #BE0F1F;
+}
+
+.email-contact{
+    word-wrap: break-word;
 }
