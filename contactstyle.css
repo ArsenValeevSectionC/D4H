@@ -406,13 +406,14 @@ h1, h2 {
   
 .submit-btn {
     width: 100%;
-    background-color: var(--lighterred);
+    background-color: #BE0F1F;
     color: #ffffff;
     padding: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-weight: bolder;
 }
   
 .submit-btn:hover {
@@ -433,4 +434,26 @@ h1, h2 {
     gap: 2em;
     margin-top: 1em;
     margin-bottom: 1em;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24;
+  color: var(--whitesmoke);
+  border-radius: 50px;
+  border: solid 2px var(--falured);
+  padding: 10px;
+  background-color: #BE0F1F;
+}
+
+.material-symbols-outlined:hover{
+    background-color: var(--falured);
+    border:solid 2px #BE0F1F;
+}
+
+.email-contact{
+    word-wrap: break-word;
 }
