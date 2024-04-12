@@ -59,7 +59,7 @@ body{
 }*/
 
 /* media query for navbar */
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1001px) {
     .icon-mob {
         display: none;
     }
@@ -190,12 +190,11 @@ body{
     
     .navigation {
         width: 100%;
-        max-width: 100%;
         height: auto;
         border-radius: 5px;
         padding: 20px;
-        position: fixed;
-        top: 3%;
+        position: relative;
+        top: 5%;
         right: 10px;
         overflow: hidden;
         z-index: 1000;
@@ -243,7 +242,6 @@ body{
 
     .navigation ul li {
         list-style: none;
-        margin-bottom: 10px;
     }
 
     .navigation ul li a {
@@ -261,11 +259,6 @@ body{
         display: none;
     }
     /* end of navbar media query */
-
-    /* media query for register page before 1000px */
-    .container.p-5.text-center.register {
-        padding: 0;
-    }
 
     .row {
         flex-direction: column;
